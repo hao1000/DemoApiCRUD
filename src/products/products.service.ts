@@ -27,7 +27,7 @@ export class ProductsService {
     return this.productsRepository.findOne(id);
   }
 
-  async  update(id: number, data: Partial<CreateProductDto>) {
+  async  update(id: string, data: Partial<CreateProductDto>) {
     await this.productsRepository.update({ id }, data);
     return await this.productsRepository.findOne({ id });
   }

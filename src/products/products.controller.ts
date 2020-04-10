@@ -24,7 +24,7 @@ export class ProductsController {
         return this.productservice.remove(id);
     }
     @Put(':id')
-    update(@Param('id') id:number,@Body()data:Partial<CreateProductDto>){
+    update(@Param('id') id:string,@Body()data:Partial<CreateProductDto>){
         return this.productservice.update(id,data);
     }
     @Get(':productName/:productPrice')
